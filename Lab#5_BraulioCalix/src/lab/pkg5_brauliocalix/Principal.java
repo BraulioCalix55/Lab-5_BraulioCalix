@@ -822,8 +822,7 @@ public class Principal extends javax.swing.JFrame {
         modeloLista.addElement(new Empleados(Nombre, fecha, Nusuario, Contra, Correo, puesto));
         jl_empleados.setModel(modeloLista);
         JOptionPane.showMessageDialog(Madmin, "Creado existosamente");
-        
-       
+
 
     }//GEN-LAST:event_CNempleMouseClicked
 
@@ -848,14 +847,14 @@ public class Principal extends javax.swing.JFrame {
         String tipo = (String) CB_tipo.getSelectedItem();
         Ndulc.setText("");
         Nsabor.setText("");
-        
+
         DefaultListModel modeloLista = (DefaultListModel) jl_dulces.getModel();
         dulce.add(new Dulces(Ndulce, sabor, tipo));
         modeloLista.addElement(new Dulces(Ndulce, sabor, tipo));
         jl_empleados.setModel(modeloLista);
         JOptionPane.showMessageDialog(Dulceria, "Creado existosamente");
-        
-        
+
+
     }//GEN-LAST:event_CreaDulceMouseClicked
 
     private void CreaPeliMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreaPeliMouseClicked
@@ -864,7 +863,7 @@ public class Principal extends javax.swing.JFrame {
         String Clasi = TaCla.getText();
         String Cate = (String) CB_cate.getSelectedItem();
         peli.add(new peliculas(Nombre, Duracion, Clasi, Cate));
-        
+
         DefaultListModel modeloLista = (DefaultListModel) jl_pelis.getModel();
         peli.add(new peliculas(Nombre, Duracion, Clasi, Cate));
         modeloLista.addElement(new peliculas(Nombre, Duracion, Clasi, Cate));
@@ -885,7 +884,7 @@ public class Principal extends javax.swing.JFrame {
         String Nombre = naseo.getText();
         String Desc = Ndescr.getText();
         String Tipo = (String) Funcion.getSelectedItem();
-        
+
         DefaultListModel modeloLista = (DefaultListModel) jl_aseo.getModel();
         aseo.add(new Aseo(Nombre, Desc, Tipo));
         modeloLista.addElement(new Aseo(Nombre, Desc, Tipo));
@@ -1009,7 +1008,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JList<String> jl_pelis;
     private javax.swing.JTextField naseo;
     // End of variables declaration//GEN-END:variables
-ArrayList<Empleados> emple = new ArrayList();
+    ArrayList<Empleados> emple = new ArrayList();
     ArrayList<Dulces> dulce = new ArrayList();
     ArrayList<peliculas> peli = new ArrayList();
     ArrayList<Aseo> aseo = new ArrayList();
