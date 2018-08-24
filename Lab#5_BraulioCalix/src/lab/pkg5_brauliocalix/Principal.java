@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 
 /**
  *
@@ -45,17 +47,17 @@ public class Principal extends javax.swing.JFrame {
         Cemple = new javax.swing.JButton();
         jScrollPane7 = new javax.swing.JScrollPane();
         jl_empleados = new javax.swing.JList<>();
-        jButton4 = new javax.swing.JButton();
+        CambioEmpleado = new javax.swing.JButton();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jTree3 = new javax.swing.JTree();
+        jt_empleados = new javax.swing.JTree();
         Dulceria = new javax.swing.JDialog();
         jLabel14 = new javax.swing.JLabel();
         dulces = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTree2 = new javax.swing.JTree();
+        jt_dulces = new javax.swing.JTree();
         jScrollPane6 = new javax.swing.JScrollPane();
         jl_dulces = new javax.swing.JList<>();
-        jButton2 = new javax.swing.JButton();
+        cambiodulce = new javax.swing.JButton();
         Cpeli = new javax.swing.JDialog();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -71,10 +73,10 @@ public class Principal extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         CreaAseo = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        arbolaseo = new javax.swing.JTree();
+        jt_aseo = new javax.swing.JTree();
         jScrollPane2 = new javax.swing.JScrollPane();
         jl_aseo = new javax.swing.JList<>();
-        jButton3 = new javax.swing.JButton();
+        cambioAseo = new javax.swing.JButton();
         CreaEmple = new javax.swing.JDialog();
         jLabel7 = new javax.swing.JLabel();
         Nnombre = new javax.swing.JTextField();
@@ -104,8 +106,8 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jl_pelis = new javax.swing.JList<>();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTree1 = new javax.swing.JTree();
-        jButton1 = new javax.swing.JButton();
+        jt_pelis = new javax.swing.JTree();
+        CambioPelis = new javax.swing.JButton();
         crearAseo = new javax.swing.JDialog();
         jLabel25 = new javax.swing.JLabel();
         naseo = new javax.swing.JTextField();
@@ -194,11 +196,16 @@ public class Principal extends javax.swing.JFrame {
         jl_empleados.setModel(new DefaultListModel());
         jScrollPane7.setViewportView(jl_empleados);
 
-        jButton4.setText("--->");
+        CambioEmpleado.setText("--->");
+        CambioEmpleado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CambioEmpleadoMouseClicked(evt);
+            }
+        });
 
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Empleados");
-        jTree3.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jScrollPane8.setViewportView(jTree3);
+        jt_empleados.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane8.setViewportView(jt_empleados);
 
         javax.swing.GroupLayout MadminLayout = new javax.swing.GroupLayout(Madmin.getContentPane());
         Madmin.getContentPane().setLayout(MadminLayout);
@@ -211,7 +218,7 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(MadminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MadminLayout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(jButton4)
+                        .addComponent(CambioEmpleado)
                         .addGap(40, 40, 40)
                         .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MadminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -229,7 +236,7 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(MadminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MadminLayout.createSequentialGroup()
                         .addGap(80, 80, 80)
-                        .addComponent(jButton4))
+                        .addComponent(CambioEmpleado))
                     .addGroup(MadminLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(MadminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -248,13 +255,18 @@ public class Principal extends javax.swing.JFrame {
         });
 
         treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("dulces");
-        jTree2.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jScrollPane4.setViewportView(jTree2);
+        jt_dulces.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane4.setViewportView(jt_dulces);
 
         jl_dulces.setModel(new DefaultListModel());
         jScrollPane6.setViewportView(jl_dulces);
 
-        jButton2.setText("--->");
+        cambiodulce.setText("--->");
+        cambiodulce.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cambiodulceMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout DulceriaLayout = new javax.swing.GroupLayout(Dulceria.getContentPane());
         Dulceria.getContentPane().setLayout(DulceriaLayout);
@@ -272,7 +284,7 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(47, 47, 47)
                         .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(66, 66, 66)
-                        .addComponent(jButton2)
+                        .addComponent(cambiodulce)
                         .addGap(49, 49, 49)
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(98, Short.MAX_VALUE))
@@ -292,7 +304,7 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                     .addGroup(DulceriaLayout.createSequentialGroup()
                         .addGap(181, 181, 181)
-                        .addComponent(jButton2)))
+                        .addComponent(cambiodulce)))
                 .addContainerGap(101, Short.MAX_VALUE))
         );
 
@@ -380,13 +392,18 @@ public class Principal extends javax.swing.JFrame {
         });
 
         treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("aseo");
-        arbolaseo.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jScrollPane1.setViewportView(arbolaseo);
+        jt_aseo.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane1.setViewportView(jt_aseo);
 
         jl_aseo.setModel(new DefaultListModel());
         jScrollPane2.setViewportView(jl_aseo);
 
-        jButton3.setText("---->");
+        cambioAseo.setText("---->");
+        cambioAseo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cambioAseoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout AseoLayout = new javax.swing.GroupLayout(Aseo.getContentPane());
         Aseo.getContentPane().setLayout(AseoLayout);
@@ -404,7 +421,7 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(47, 47, 47)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38)
-                        .addComponent(jButton3)
+                        .addComponent(cambioAseo)
                         .addGap(43, 43, 43)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(159, Short.MAX_VALUE))
@@ -424,7 +441,7 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)))
                     .addGroup(AseoLayout.createSequentialGroup()
                         .addGap(186, 186, 186)
-                        .addComponent(jButton3)))
+                        .addComponent(cambioAseo)))
                 .addContainerGap(132, Short.MAX_VALUE))
         );
 
@@ -596,10 +613,15 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jl_pelis);
 
         treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("peliculas");
-        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jScrollPane5.setViewportView(jTree1);
+        jt_pelis.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane5.setViewportView(jt_pelis);
 
-        jButton1.setText("--->");
+        CambioPelis.setText("--->");
+        CambioPelis.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CambioPelisMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout BoleteriaLayout = new javax.swing.GroupLayout(Boleteria.getContentPane());
         Boleteria.getContentPane().setLayout(BoleteriaLayout);
@@ -618,7 +640,7 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(31, 31, 31)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
-                        .addComponent(jButton1)
+                        .addComponent(CambioPelis)
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(132, Short.MAX_VALUE))
@@ -638,7 +660,7 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(BoleteriaLayout.createSequentialGroup()
                         .addGap(122, 122, 122)
-                        .addComponent(jButton1)))
+                        .addComponent(CambioPelis)))
                 .addContainerGap(118, Short.MAX_VALUE))
         );
 
@@ -893,6 +915,174 @@ public class Principal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_CaseoMouseClicked
 
+    private void cambioAseoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cambioAseoMouseClicked
+        if (jl_aseo.getSelectedIndex() >= 0) {// verificar si teiene una persona seleccionada
+            DefaultTreeModel modeloARBOL = (DefaultTreeModel) jt_aseo.getModel();
+            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modeloARBOL.getRoot();
+            //obtenera la persona a guardar
+            DefaultListModel modeloLISTA = (DefaultListModel) jl_aseo.getModel();
+            
+            String nombre;
+            String descrip;
+            String funcion;
+            /*
+             nombre;
+    private String descrip;
+    private String funcion;
+            */
+            nombre=((Aseo) modeloLISTA.get(jl_aseo.getSelectedIndex())).getNombre();
+            
+            
+            descrip = ((Aseo) modeloLISTA.get(jl_aseo.getSelectedIndex())).getDescrip();
+            
+            funcion= ((Aseo) modeloLISTA.get(jl_aseo.getSelectedIndex())).getFuncion();
+            
+            int centinela = -1;
+            //que hace el for
+            for (int i = 0; i < raiz.getChildCount(); i++) {
+                if (raiz.getChildAt(i).toString().equals(nombre)) {
+                    DefaultMutableTreeNode p = new DefaultMutableTreeNode(new Aseo(nombre, descrip, funcion));
+                    ((DefaultMutableTreeNode) raiz.getChildAt(i)).add(p);
+                    centinela = 1;
+                }
+            }
+            if (centinela == -1) {
+                DefaultMutableTreeNode n = new DefaultMutableTreeNode(funcion);
+                DefaultMutableTreeNode p = new DefaultMutableTreeNode(new Aseo(nombre, descrip, funcion));
+
+                n.add(p);
+                raiz.add(n);
+            }
+            modeloARBOL.reload();
+        } else {
+            JOptionPane.showMessageDialog(this, "No hay personas seleccionadas");
+        }
+    }//GEN-LAST:event_cambioAseoMouseClicked
+
+    private void CambioEmpleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CambioEmpleadoMouseClicked
+        if (jl_empleados.getSelectedIndex() >= 0) {// verificar si teiene una persona seleccionada
+            DefaultTreeModel modeloARBOL = (DefaultTreeModel) jt_empleados.getModel();
+            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modeloARBOL.getRoot();
+            //obtenera la persona a guardar
+            DefaultListModel modeloLISTA = (DefaultListModel) jl_empleados.getModel();
+            String Nusuario;
+            String nombre;
+            String puesto;
+            String Contra;
+            Contra=((Empleados) modeloLISTA.get(jl_empleados.getSelectedIndex())).getContra();
+            Date fecha;
+            fecha=((Empleados) modeloLISTA.get(jl_empleados.getSelectedIndex())).getFecha();
+            String Correo=((Empleados) modeloLISTA.get(jl_empleados.getSelectedIndex())).getCorreo();
+            Nusuario = ((Empleados) modeloLISTA.get(jl_empleados.getSelectedIndex())).getUsuario();
+            nombre = ((Empleados) modeloLISTA.get(jl_empleados.getSelectedIndex())).getNombre();
+            puesto = ((Empleados) modeloLISTA.get(jl_empleados.getSelectedIndex())).getPuesto();
+            
+            int centinela = -1;
+            //que hace el for
+            for (int i = 0; i < raiz.getChildCount(); i++) {
+                if (raiz.getChildAt(i).toString().equals(Nusuario)) {
+                    DefaultMutableTreeNode p = new DefaultMutableTreeNode(new Empleados(nombre, fecha, Nusuario, Contra, Correo, puesto));
+                    ((DefaultMutableTreeNode) raiz.getChildAt(i)).add(p);
+                    centinela = 1;
+                }
+            }
+            if (centinela == -1) {
+                DefaultMutableTreeNode n = new DefaultMutableTreeNode(puesto);
+                DefaultMutableTreeNode p = new DefaultMutableTreeNode(new Empleados(nombre, fecha, Nusuario, Contra, Correo, puesto));
+                n.add(p);
+                raiz.add(n);
+            }
+            modeloARBOL.reload();
+        } else {
+            JOptionPane.showMessageDialog(this, "No hay personas seleccionadas");
+        }
+    }//GEN-LAST:event_CambioEmpleadoMouseClicked
+
+    private void cambiodulceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cambiodulceMouseClicked
+        if (jl_dulces.getSelectedIndex() >= 0) {// verificar si teiene una persona seleccionada
+            DefaultTreeModel modeloARBOL = (DefaultTreeModel) jt_dulces.getModel();
+            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modeloARBOL.getRoot();
+            //obtenera la persona a guardar
+            DefaultListModel modeloLISTA = (DefaultListModel) jl_dulces.getModel();
+            /*
+             nombre;
+    private String sabor;
+    private String c
+            */
+            
+            String nombre;
+            String sabor;
+            String catego;
+            catego=((Dulces) modeloLISTA.get(jl_dulces.getSelectedIndex())).getCategoria();  
+            nombre = ((Dulces) modeloLISTA.get(jl_dulces.getSelectedIndex())).getNombre();
+            sabor = ((Dulces) modeloLISTA.get(jl_dulces.getSelectedIndex())).getSabor();
+            
+            int centinela = -1;
+            //que hace el for
+            for (int i = 0; i < raiz.getChildCount(); i++) {
+                if (raiz.getChildAt(i).toString().equals(nombre)) {
+                    DefaultMutableTreeNode p = new DefaultMutableTreeNode(new Dulces(nombre, sabor, catego));
+                    ((DefaultMutableTreeNode) raiz.getChildAt(i)).add(p);
+                    centinela = 1;
+                }
+            }
+            if (centinela == -1) {
+                DefaultMutableTreeNode n = new DefaultMutableTreeNode(sabor);
+                DefaultMutableTreeNode p = new DefaultMutableTreeNode(new Dulces(nombre, sabor, catego));
+                n.add(p);
+                raiz.add(n);
+            }
+            modeloARBOL.reload();
+        } else {
+            JOptionPane.showMessageDialog(this, "No hay personas seleccionadas");
+        }
+    }//GEN-LAST:event_cambiodulceMouseClicked
+
+    private void CambioPelisMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CambioPelisMouseClicked
+        if (jl_pelis.getSelectedIndex() >= 0) {// verificar si teiene una persona seleccionada
+            DefaultTreeModel modeloARBOL = (DefaultTreeModel) jt_pelis.getModel();
+            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modeloARBOL.getRoot();
+            //obtenera la persona a guardar
+            DefaultListModel modeloLISTA = (DefaultListModel) jl_pelis.getModel();
+            /*
+              nombre;
+    private String duracion;
+    private String clasificacion;
+    private String categoria;
+
+            */
+            
+            String nombre;
+            String durecion;
+            String clasifica;
+            String catego;
+            
+            catego=((peliculas) modeloLISTA.get(jl_pelis.getSelectedIndex())).getCategoria();  
+            nombre = ((peliculas) modeloLISTA.get(jl_pelis.getSelectedIndex())).getNombre();
+            durecion = ((peliculas) modeloLISTA.get(jl_pelis.getSelectedIndex())).getDuracion();
+            clasifica=((peliculas)modeloLISTA.get(jl_pelis.getSelectedIndex())).getClasificacion();
+            
+            int centinela = -1;
+            //que hace el for
+            for (int i = 0; i < raiz.getChildCount(); i++) {
+                if (raiz.getChildAt(i).toString().equals(nombre)) {
+                    DefaultMutableTreeNode p = new DefaultMutableTreeNode(new peliculas(nombre, durecion, clasifica, catego));
+                    ((DefaultMutableTreeNode) raiz.getChildAt(i)).add(p);
+                    centinela = 1;
+                }
+            }
+            if (centinela == -1) {
+                DefaultMutableTreeNode n = new DefaultMutableTreeNode(clasifica);
+                DefaultMutableTreeNode p = new DefaultMutableTreeNode(new peliculas(nombre, durecion, clasifica, catego));
+                n.add(p);
+                raiz.add(n);
+            }
+            modeloARBOL.reload();
+        } else {
+            JOptionPane.showMessageDialog(this, "No hay personas seleccionadas");
+        }
+    }//GEN-LAST:event_CambioPelisMouseClicked
+
     public static void main(String args[]) {
 
         try {
@@ -930,6 +1120,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField CContra;
     private javax.swing.JTextField CCorreo;
     private javax.swing.JButton CNemple;
+    private javax.swing.JButton CambioEmpleado;
+    private javax.swing.JButton CambioPelis;
     private javax.swing.JButton Caseo;
     private javax.swing.JButton Cemple;
     private javax.swing.JDialog Cpeli;
@@ -954,15 +1146,12 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField Nsabor;
     private javax.swing.JTextField TaCla;
     private javax.swing.JTextField USUlog;
-    private javax.swing.JTree arbolaseo;
     private javax.swing.JButton btcrearpeli;
+    private javax.swing.JButton cambioAseo;
+    private javax.swing.JButton cambiodulce;
     private javax.swing.JPasswordField contralog;
     private javax.swing.JDialog crearAseo;
     private javax.swing.JButton dulces;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -999,13 +1188,14 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JTree jTree1;
-    private javax.swing.JTree jTree2;
-    private javax.swing.JTree jTree3;
     private javax.swing.JList<String> jl_aseo;
     private javax.swing.JList<String> jl_dulces;
     private javax.swing.JList<String> jl_empleados;
     private javax.swing.JList<String> jl_pelis;
+    private javax.swing.JTree jt_aseo;
+    private javax.swing.JTree jt_dulces;
+    private javax.swing.JTree jt_empleados;
+    private javax.swing.JTree jt_pelis;
     private javax.swing.JTextField naseo;
     // End of variables declaration//GEN-END:variables
     ArrayList<Empleados> emple = new ArrayList();
