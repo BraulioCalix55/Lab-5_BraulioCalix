@@ -47,6 +47,9 @@ public class Principal extends javax.swing.JFrame {
         dulces = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTree2 = new javax.swing.JTree();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jList3 = new javax.swing.JList<>();
+        jButton2 = new javax.swing.JButton();
         Cpeli = new javax.swing.JDialog();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -65,6 +68,7 @@ public class Principal extends javax.swing.JFrame {
         arbolaseo = new javax.swing.JTree();
         jScrollPane2 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
+        jButton3 = new javax.swing.JButton();
         CreaEmple = new javax.swing.JDialog();
         jLabel7 = new javax.swing.JLabel();
         Nnombre = new javax.swing.JTextField();
@@ -91,6 +95,11 @@ public class Principal extends javax.swing.JFrame {
         Boleteria = new javax.swing.JDialog();
         jLabel23 = new javax.swing.JLabel();
         btcrearpeli = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTree1 = new javax.swing.JTree();
+        jButton1 = new javax.swing.JButton();
         crearAseo = new javax.swing.JDialog();
         jLabel25 = new javax.swing.JLabel();
         naseo = new javax.swing.JTextField();
@@ -202,6 +211,11 @@ public class Principal extends javax.swing.JFrame {
         jTree2.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane4.setViewportView(jTree2);
 
+        jList3.setModel(new DefaultListModel());
+        jScrollPane6.setViewportView(jList3);
+
+        jButton2.setText("--->");
+
         javax.swing.GroupLayout DulceriaLayout = new javax.swing.GroupLayout(Dulceria.getContentPane());
         Dulceria.getContentPane().setLayout(DulceriaLayout);
         DulceriaLayout.setHorizontalGroup(
@@ -215,9 +229,13 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(145, 145, 145)
                         .addComponent(dulces))
                     .addGroup(DulceriaLayout.createSequentialGroup()
-                        .addGap(351, 351, 351)
+                        .addGap(47, 47, 47)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(66, 66, 66)
+                        .addComponent(jButton2)
+                        .addGap(49, 49, 49)
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
         DulceriaLayout.setVerticalGroup(
             DulceriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,8 +244,15 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jLabel14)
                 .addGap(18, 18, 18)
                 .addComponent(dulces)
-                .addGap(90, 90, 90)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(DulceriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DulceriaLayout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addGroup(DulceriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                    .addGroup(DulceriaLayout.createSequentialGroup()
+                        .addGap(181, 181, 181)
+                        .addComponent(jButton2)))
                 .addContainerGap(101, Short.MAX_VALUE))
         );
 
@@ -318,7 +343,10 @@ public class Principal extends javax.swing.JFrame {
         arbolaseo.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane1.setViewportView(arbolaseo);
 
+        jList1.setModel(new DefaultListModel());
         jScrollPane2.setViewportView(jList1);
+
+        jButton3.setText("---->");
 
         javax.swing.GroupLayout AseoLayout = new javax.swing.GroupLayout(Aseo.getContentPane());
         Aseo.getContentPane().setLayout(AseoLayout);
@@ -335,9 +363,11 @@ public class Principal extends javax.swing.JFrame {
                     .addGroup(AseoLayout.createSequentialGroup()
                         .addGap(47, 47, 47)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(160, 160, 160)
+                        .addGap(38, 38, 38)
+                        .addComponent(jButton3)
+                        .addGap(43, 43, 43)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addContainerGap(159, Short.MAX_VALUE))
         );
         AseoLayout.setVerticalGroup(
             AseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -346,10 +376,15 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jLabel24)
                 .addGap(18, 18, 18)
                 .addComponent(CreaAseo)
-                .addGap(85, 85, 85)
-                .addGroup(AseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane2)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE))
+                .addGroup(AseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AseoLayout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addGroup(AseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane2)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)))
+                    .addGroup(AseoLayout.createSequentialGroup()
+                        .addGap(186, 186, 186)
+                        .addComponent(jButton3)))
                 .addContainerGap(132, Short.MAX_VALUE))
         );
 
@@ -517,18 +552,36 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jList2.setModel(new DefaultListModel());
+        jScrollPane3.setViewportView(jList2);
+
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("peliculas");
+        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane5.setViewportView(jTree1);
+
+        jButton1.setText("--->");
+
         javax.swing.GroupLayout BoleteriaLayout = new javax.swing.GroupLayout(Boleteria.getContentPane());
         Boleteria.getContentPane().setLayout(BoleteriaLayout);
         BoleteriaLayout.setHorizontalGroup(
             BoleteriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BoleteriaLayout.createSequentialGroup()
-                .addGap(143, 143, 143)
                 .addGroup(BoleteriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btcrearpeli)
                     .addGroup(BoleteriaLayout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jLabel23)))
-                .addContainerGap(146, Short.MAX_VALUE))
+                        .addGap(143, 143, 143)
+                        .addGroup(BoleteriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btcrearpeli)
+                            .addGroup(BoleteriaLayout.createSequentialGroup()
+                                .addGap(17, 17, 17)
+                                .addComponent(jLabel23))))
+                    .addGroup(BoleteriaLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(jButton1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(152, Short.MAX_VALUE))
         );
         BoleteriaLayout.setVerticalGroup(
             BoleteriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -537,7 +590,16 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jLabel23)
                 .addGap(31, 31, 31)
                 .addComponent(btcrearpeli)
-                .addContainerGap(205, Short.MAX_VALUE))
+                .addGroup(BoleteriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BoleteriaLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addGroup(BoleteriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(BoleteriaLayout.createSequentialGroup()
+                        .addGap(122, 122, 122)
+                        .addComponent(jButton1)))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         jLabel25.setText("Nombre");
@@ -837,6 +899,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPasswordField contralog;
     private javax.swing.JDialog crearAseo;
     private javax.swing.JButton dulces;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -865,9 +930,15 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList2;
+    private javax.swing.JList<String> jList3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JTree jTree1;
     private javax.swing.JTree jTree2;
     private javax.swing.JTextField naseo;
     // End of variables declaration//GEN-END:variables
