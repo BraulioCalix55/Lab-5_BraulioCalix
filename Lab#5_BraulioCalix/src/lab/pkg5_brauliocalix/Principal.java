@@ -116,6 +116,26 @@ public class Principal extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         Funcion = new javax.swing.JComboBox<>();
         Caseo = new javax.swing.JButton();
+        popempleado = new javax.swing.JPopupMenu();
+        Modificar_nombre = new javax.swing.JMenuItem();
+        modificar_fecha = new javax.swing.JMenuItem();
+        modificar_usuario = new javax.swing.JMenuItem();
+        modificar_contra = new javax.swing.JMenuItem();
+        modificar_correo = new javax.swing.JMenuItem();
+        modificar_puesto = new javax.swing.JMenuItem();
+        popDulces = new javax.swing.JPopupMenu();
+        modificar_nombre = new javax.swing.JMenuItem();
+        modificar_sabor = new javax.swing.JMenuItem();
+        modificar_categoria = new javax.swing.JMenuItem();
+        popPelis = new javax.swing.JPopupMenu();
+        modi_nombre = new javax.swing.JMenuItem();
+        modificar_duracion = new javax.swing.JMenuItem();
+        modificar_clasi = new javax.swing.JMenuItem();
+        modificar_categ = new javax.swing.JMenuItem();
+        popaseo = new javax.swing.JPopupMenu();
+        modiNombe = new javax.swing.JMenuItem();
+        modidesc = new javax.swing.JMenuItem();
+        midifuncio = new javax.swing.JMenuItem();
         LOGINP = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -205,6 +225,11 @@ public class Principal extends javax.swing.JFrame {
 
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Empleados");
         jt_empleados.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_empleados.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_empleadosMouseClicked(evt);
+            }
+        });
         jScrollPane8.setViewportView(jt_empleados);
 
         javax.swing.GroupLayout MadminLayout = new javax.swing.GroupLayout(Madmin.getContentPane());
@@ -256,6 +281,11 @@ public class Principal extends javax.swing.JFrame {
 
         treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("dulces");
         jt_dulces.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_dulces.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_dulcesMouseClicked(evt);
+            }
+        });
         jScrollPane4.setViewportView(jt_dulces);
 
         jl_dulces.setModel(new DefaultListModel());
@@ -393,6 +423,11 @@ public class Principal extends javax.swing.JFrame {
 
         treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("aseo");
         jt_aseo.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_aseo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_aseoMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jt_aseo);
 
         jl_aseo.setModel(new DefaultListModel());
@@ -614,6 +649,11 @@ public class Principal extends javax.swing.JFrame {
 
         treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("peliculas");
         jt_pelis.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_pelis.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_pelisMouseClicked(evt);
+            }
+        });
         jScrollPane5.setViewportView(jt_pelis);
 
         CambioPelis.setText("--->");
@@ -720,6 +760,56 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(Caseo)
                     .addGap(47, 47, 47))
             );
+
+            Modificar_nombre.setText("modificar nombre");
+            Modificar_nombre.setToolTipText("");
+            popempleado.add(Modificar_nombre);
+
+            modificar_fecha.setText("modificar_fecha");
+            popempleado.add(modificar_fecha);
+
+            modificar_usuario.setText("modificar_usuario");
+            popempleado.add(modificar_usuario);
+
+            modificar_contra.setText("modificar contrasenia");
+            popempleado.add(modificar_contra);
+
+            modificar_correo.setText("modificar correo");
+            popempleado.add(modificar_correo);
+
+            modificar_puesto.setText("modificar puesto");
+            popempleado.add(modificar_puesto);
+
+            modificar_nombre.setText("modificar nombre");
+            popDulces.add(modificar_nombre);
+
+            modificar_sabor.setText("modificar sabor");
+            popDulces.add(modificar_sabor);
+
+            modificar_categoria.setText("modificar categoria");
+            popDulces.add(modificar_categoria);
+
+            modi_nombre.setText("modificar nombre");
+            modi_nombre.setToolTipText("");
+            popPelis.add(modi_nombre);
+
+            modificar_duracion.setText("modificar duracion");
+            popPelis.add(modificar_duracion);
+
+            modificar_clasi.setText("modifcar clasificacion");
+            popPelis.add(modificar_clasi);
+
+            modificar_categ.setText("modificar categoria");
+            popPelis.add(modificar_categ);
+
+            modiNombe.setText("modiciar nombre");
+            popaseo.add(modiNombe);
+
+            modidesc.setText("modificar descripccioc");
+            popaseo.add(modidesc);
+
+            midifuncio.setText("modificar funcion");
+            popaseo.add(midifuncio);
 
             setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -921,7 +1011,7 @@ public class Principal extends javax.swing.JFrame {
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modeloARBOL.getRoot();
             //obtenera la persona a guardar
             DefaultListModel modeloLISTA = (DefaultListModel) jl_aseo.getModel();
-            
+
             String nombre;
             String descrip;
             String funcion;
@@ -929,14 +1019,13 @@ public class Principal extends javax.swing.JFrame {
              nombre;
     private String descrip;
     private String funcion;
-            */
-            nombre=((Aseo) modeloLISTA.get(jl_aseo.getSelectedIndex())).getNombre();
-            
-            
+             */
+            nombre = ((Aseo) modeloLISTA.get(jl_aseo.getSelectedIndex())).getNombre();
+
             descrip = ((Aseo) modeloLISTA.get(jl_aseo.getSelectedIndex())).getDescrip();
-            
-            funcion= ((Aseo) modeloLISTA.get(jl_aseo.getSelectedIndex())).getFuncion();
-            
+
+            funcion = ((Aseo) modeloLISTA.get(jl_aseo.getSelectedIndex())).getFuncion();
+
             int centinela = -1;
             //que hace el for
             for (int i = 0; i < raiz.getChildCount(); i++) {
@@ -969,14 +1058,14 @@ public class Principal extends javax.swing.JFrame {
             String nombre;
             String puesto;
             String Contra;
-            Contra=((Empleados) modeloLISTA.get(jl_empleados.getSelectedIndex())).getContra();
+            Contra = ((Empleados) modeloLISTA.get(jl_empleados.getSelectedIndex())).getContra();
             Date fecha;
-            fecha=((Empleados) modeloLISTA.get(jl_empleados.getSelectedIndex())).getFecha();
-            String Correo=((Empleados) modeloLISTA.get(jl_empleados.getSelectedIndex())).getCorreo();
+            fecha = ((Empleados) modeloLISTA.get(jl_empleados.getSelectedIndex())).getFecha();
+            String Correo = ((Empleados) modeloLISTA.get(jl_empleados.getSelectedIndex())).getCorreo();
             Nusuario = ((Empleados) modeloLISTA.get(jl_empleados.getSelectedIndex())).getUsuario();
             nombre = ((Empleados) modeloLISTA.get(jl_empleados.getSelectedIndex())).getNombre();
             puesto = ((Empleados) modeloLISTA.get(jl_empleados.getSelectedIndex())).getPuesto();
-            
+
             int centinela = -1;
             //que hace el for
             for (int i = 0; i < raiz.getChildCount(); i++) {
@@ -1008,15 +1097,15 @@ public class Principal extends javax.swing.JFrame {
              nombre;
     private String sabor;
     private String c
-            */
-            
+             */
+
             String nombre;
             String sabor;
             String catego;
-            catego=((Dulces) modeloLISTA.get(jl_dulces.getSelectedIndex())).getCategoria();  
+            catego = ((Dulces) modeloLISTA.get(jl_dulces.getSelectedIndex())).getCategoria();
             nombre = ((Dulces) modeloLISTA.get(jl_dulces.getSelectedIndex())).getNombre();
             sabor = ((Dulces) modeloLISTA.get(jl_dulces.getSelectedIndex())).getSabor();
-            
+
             int centinela = -1;
             //que hace el for
             for (int i = 0; i < raiz.getChildCount(); i++) {
@@ -1044,24 +1133,15 @@ public class Principal extends javax.swing.JFrame {
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modeloARBOL.getRoot();
             //obtenera la persona a guardar
             DefaultListModel modeloLISTA = (DefaultListModel) jl_pelis.getModel();
-            /*
-              nombre;
-    private String duracion;
-    private String clasificacion;
-    private String categoria;
-
-            */
-            
             String nombre;
             String durecion;
             String clasifica;
             String catego;
-            
-            catego=((peliculas) modeloLISTA.get(jl_pelis.getSelectedIndex())).getCategoria();  
+            catego = ((peliculas) modeloLISTA.get(jl_pelis.getSelectedIndex())).getCategoria();
             nombre = ((peliculas) modeloLISTA.get(jl_pelis.getSelectedIndex())).getNombre();
             durecion = ((peliculas) modeloLISTA.get(jl_pelis.getSelectedIndex())).getDuracion();
-            clasifica=((peliculas)modeloLISTA.get(jl_pelis.getSelectedIndex())).getClasificacion();
-            
+            clasifica = ((peliculas) modeloLISTA.get(jl_pelis.getSelectedIndex())).getClasificacion();
+
             int centinela = -1;
             //que hace el for
             for (int i = 0; i < raiz.getChildCount(); i++) {
@@ -1082,6 +1162,44 @@ public class Principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "No hay personas seleccionadas");
         }
     }//GEN-LAST:event_CambioPelisMouseClicked
+
+    private void jt_pelisMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_pelisMouseClicked
+        int fila = 0;
+        if (jl_pelis.getSelectedIndex() >= 0) {
+            if (evt.isMetaDown()) {
+                popPelis.show(evt.getComponent(), evt.getX(), evt.getY());
+            }
+        }
+    }//GEN-LAST:event_jt_pelisMouseClicked
+
+    private void jt_aseoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_aseoMouseClicked
+        // TODO add your handling code here:
+        int fila = 0;
+        if (jl_aseo.getSelectedIndex() >= 0) {
+            if (evt.isMetaDown()) {
+                popaseo.show(evt.getComponent(), evt.getX(), evt.getY());
+            }
+        }
+    }//GEN-LAST:event_jt_aseoMouseClicked
+
+    private void jt_empleadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_empleadosMouseClicked
+        int fila = 0;
+        if (jl_empleados.getSelectedIndex() >= 0) {
+            if (evt.isMetaDown()) {
+                popempleado.show(evt.getComponent(), evt.getX(), evt.getY());
+            }
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jt_empleadosMouseClicked
+
+    private void jt_dulcesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_dulcesMouseClicked
+        // TODO add your handling code here:
+        int fila = 0;
+        if (jl_dulces.getSelectedIndex() >= 0) {
+            if (evt.isMetaDown()) {
+                popDulces.show(evt.getComponent(), evt.getX(), evt.getY());
+            }
+        }
+    }//GEN-LAST:event_jt_dulcesMouseClicked
 
     public static void main(String args[]) {
 
@@ -1138,6 +1256,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton LOGINP;
     private javax.swing.JDialog LogIn;
     private javax.swing.JDialog Madmin;
+    private javax.swing.JMenuItem Modificar_nombre;
     private javax.swing.JTextField NPeli;
     private javax.swing.JTextField NUsuario;
     private javax.swing.JTextField Ndescr;
@@ -1196,7 +1315,26 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTree jt_dulces;
     private javax.swing.JTree jt_empleados;
     private javax.swing.JTree jt_pelis;
+    private javax.swing.JMenuItem midifuncio;
+    private javax.swing.JMenuItem modiNombe;
+    private javax.swing.JMenuItem modi_nombre;
+    private javax.swing.JMenuItem modidesc;
+    private javax.swing.JMenuItem modificar_categ;
+    private javax.swing.JMenuItem modificar_categoria;
+    private javax.swing.JMenuItem modificar_clasi;
+    private javax.swing.JMenuItem modificar_contra;
+    private javax.swing.JMenuItem modificar_correo;
+    private javax.swing.JMenuItem modificar_duracion;
+    private javax.swing.JMenuItem modificar_fecha;
+    private javax.swing.JMenuItem modificar_nombre;
+    private javax.swing.JMenuItem modificar_puesto;
+    private javax.swing.JMenuItem modificar_sabor;
+    private javax.swing.JMenuItem modificar_usuario;
     private javax.swing.JTextField naseo;
+    private javax.swing.JPopupMenu popDulces;
+    private javax.swing.JPopupMenu popPelis;
+    private javax.swing.JPopupMenu popaseo;
+    private javax.swing.JPopupMenu popempleado;
     // End of variables declaration//GEN-END:variables
     ArrayList<Empleados> emple = new ArrayList();
     ArrayList<Dulces> dulce = new ArrayList();

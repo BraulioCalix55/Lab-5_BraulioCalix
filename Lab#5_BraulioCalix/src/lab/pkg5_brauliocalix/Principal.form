@@ -207,6 +207,9 @@
                   <TreeModel code="Empleados"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jt_empleadosMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -292,6 +295,9 @@
                   <TreeModel code="dulces"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jt_dulcesMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -536,6 +542,9 @@
                   <TreeModel code="aseo"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jt_aseoMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -938,6 +947,9 @@
                   <TreeModel code="peliculas"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jt_pelisMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -1048,6 +1060,120 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CaseoMouseClicked"/>
           </Events>
         </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPopupMenu" name="popempleado">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="Modificar_nombre">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modificar nombre"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="modificar_fecha">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modificar_fecha"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="modificar_usuario">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modificar_usuario"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="modificar_contra">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modificar contrasenia"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="modificar_correo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modificar correo"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="modificar_puesto">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modificar puesto"/>
+          </Properties>
+        </MenuItem>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPopupMenu" name="popDulces">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="modificar_nombre">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modificar nombre"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="modificar_sabor">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modificar sabor"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="modificar_categoria">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modificar categoria"/>
+          </Properties>
+        </MenuItem>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPopupMenu" name="popPelis">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="modi_nombre">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modificar nombre"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="modificar_duracion">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modificar duracion"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="modificar_clasi">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modifcar clasificacion"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="modificar_categ">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modificar categoria"/>
+          </Properties>
+        </MenuItem>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPopupMenu" name="popaseo">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="modiNombe">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modiciar nombre"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="modidesc">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modificar descripccioc"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="midifuncio">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="modificar funcion"/>
+          </Properties>
+        </MenuItem>
       </SubComponents>
     </Container>
   </NonVisualComponents>
