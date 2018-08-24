@@ -7,6 +7,7 @@ package lab.pkg5_brauliocalix;
 
 import java.util.ArrayList;
 import java.util.Date;
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
 /**
@@ -44,18 +45,26 @@ public class Principal extends javax.swing.JFrame {
         Dulceria = new javax.swing.JDialog();
         jLabel14 = new javax.swing.JLabel();
         dulces = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTree2 = new javax.swing.JTree();
         Cpeli = new javax.swing.JDialog();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         NPeli = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        Durac = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        TaCla = new javax.swing.JTextField();
+        CB_cate = new javax.swing.JComboBox<>();
         jLabel22 = new javax.swing.JLabel();
         CreaPeli = new javax.swing.JButton();
         Aseo = new javax.swing.JDialog();
+        jLabel24 = new javax.swing.JLabel();
+        CreaAseo = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        arbolaseo = new javax.swing.JTree();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
         CreaEmple = new javax.swing.JDialog();
         jLabel7 = new javax.swing.JLabel();
         Nnombre = new javax.swing.JTextField();
@@ -82,6 +91,14 @@ public class Principal extends javax.swing.JFrame {
         Boleteria = new javax.swing.JDialog();
         jLabel23 = new javax.swing.JLabel();
         btcrearpeli = new javax.swing.JButton();
+        crearAseo = new javax.swing.JDialog();
+        jLabel25 = new javax.swing.JLabel();
+        naseo = new javax.swing.JTextField();
+        jLabel26 = new javax.swing.JLabel();
+        Ndescr = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        Funcion = new javax.swing.JComboBox<>();
+        Caseo = new javax.swing.JButton();
         LOGINP = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -181,6 +198,10 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("dulces");
+        jTree2.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane4.setViewportView(jTree2);
+
         javax.swing.GroupLayout DulceriaLayout = new javax.swing.GroupLayout(Dulceria.getContentPane());
         Dulceria.getContentPane().setLayout(DulceriaLayout);
         DulceriaLayout.setHorizontalGroup(
@@ -192,8 +213,11 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(jLabel14))
                     .addGroup(DulceriaLayout.createSequentialGroup()
                         .addGap(145, 145, 145)
-                        .addComponent(dulces)))
-                .addContainerGap(245, Short.MAX_VALUE))
+                        .addComponent(dulces))
+                    .addGroup(DulceriaLayout.createSequentialGroup()
+                        .addGap(351, 351, 351)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
         DulceriaLayout.setVerticalGroup(
             DulceriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,7 +226,9 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jLabel14)
                 .addGap(18, 18, 18)
                 .addComponent(dulces)
-                .addContainerGap(263, Short.MAX_VALUE))
+                .addGap(90, 90, 90)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
         jLabel18.setText("BOLETERIA");
@@ -213,11 +239,16 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel21.setText("Clasificacion");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "terror", "comedia", "romance", "drama", "accion", "infantil" }));
+        CB_cate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "terror", "comedia", "romance", "drama", "accion", "infantil" }));
 
         jLabel22.setText("categoria");
 
         CreaPeli.setText("Crear Pelicula");
+        CreaPeli.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CreaPeliMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout CpeliLayout = new javax.swing.GroupLayout(Cpeli.getContentPane());
         Cpeli.getContentPane().setLayout(CpeliLayout);
@@ -238,10 +269,10 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(jLabel22))
                         .addGap(85, 85, 85)
                         .addGroup(CpeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBox1, 0, 89, Short.MAX_VALUE)
+                            .addComponent(CB_cate, 0, 89, Short.MAX_VALUE)
                             .addComponent(NPeli)
-                            .addComponent(jTextField1)
-                            .addComponent(jTextField2)))
+                            .addComponent(Durac)
+                            .addComponent(TaCla)))
                     .addGroup(CpeliLayout.createSequentialGroup()
                         .addGap(127, 127, 127)
                         .addComponent(CreaPeli)))
@@ -259,29 +290,67 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addGroup(CpeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Durac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(CpeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TaCla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
                 .addGroup(CpeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CB_cate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel22))
                 .addGap(46, 46, 46)
                 .addComponent(CreaPeli)
                 .addContainerGap(64, Short.MAX_VALUE))
         );
 
+        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel24.setText("ASEO");
+
+        CreaAseo.setText("Crear Nuefa herramient");
+        CreaAseo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CreaAseoMouseClicked(evt);
+            }
+        });
+
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("aseo");
+        arbolaseo.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane1.setViewportView(arbolaseo);
+
+        jScrollPane2.setViewportView(jList1);
+
         javax.swing.GroupLayout AseoLayout = new javax.swing.GroupLayout(Aseo.getContentPane());
         Aseo.getContentPane().setLayout(AseoLayout);
         AseoLayout.setHorizontalGroup(
             AseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(AseoLayout.createSequentialGroup()
+                .addGroup(AseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AseoLayout.createSequentialGroup()
+                        .addGap(169, 169, 169)
+                        .addComponent(jLabel24))
+                    .addGroup(AseoLayout.createSequentialGroup()
+                        .addGap(120, 120, 120)
+                        .addComponent(CreaAseo))
+                    .addGroup(AseoLayout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(160, 160, 160)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
         AseoLayout.setVerticalGroup(
             AseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(AseoLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jLabel24)
+                .addGap(18, 18, 18)
+                .addComponent(CreaAseo)
+                .addGap(85, 85, 85)
+                .addGroup(AseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
 
         jLabel7.setText("Nombre ");
@@ -390,9 +459,9 @@ public class Principal extends javax.swing.JFrame {
         CB_tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chocolates", "Gomitas", "Paletas ", "Chicles" }));
 
         CreaDulce.setText("Crear Dulce");
-        CreaDulce.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                CreaDulceKeyPressed(evt);
+        CreaDulce.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CreaDulceMouseClicked(evt);
             }
         });
 
@@ -471,57 +540,114 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(205, Short.MAX_VALUE))
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel25.setText("Nombre");
 
-        LOGINP.setText("LOGIN");
-        LOGINP.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LOGINPMouseClicked(evt);
-            }
-        });
+        jLabel26.setText("Descripccion");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel4.setText("BIENVENIDO A CINEPOLIS");
+        jLabel27.setText("Funcion\\");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel6.setText("LOG IN");
+            Funcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "limpeza de pisos", "limpieza de vidrios", "limpieza de mesas" }));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            Caseo.setText("crear");
+            Caseo.addMouseListener(new java.awt.event.MouseAdapter() {
+                public void mouseClicked(java.awt.event.MouseEvent evt) {
+                    CaseoMouseClicked(evt);
+                }
+            });
+
+            javax.swing.GroupLayout crearAseoLayout = new javax.swing.GroupLayout(crearAseo.getContentPane());
+            crearAseo.getContentPane().setLayout(crearAseoLayout);
+            crearAseoLayout.setHorizontalGroup(
+                crearAseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(crearAseoLayout.createSequentialGroup()
+                    .addGroup(crearAseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(crearAseoLayout.createSequentialGroup()
+                            .addGap(37, 37, 37)
+                            .addGroup(crearAseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel25)
+                                .addComponent(jLabel26)
+                                .addComponent(jLabel27))
+                            .addGap(88, 88, 88)
+                            .addGroup(crearAseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(Funcion, 0, 142, Short.MAX_VALUE)
+                                .addComponent(Ndescr)
+                                .addComponent(naseo)))
+                        .addGroup(crearAseoLayout.createSequentialGroup()
+                            .addGap(147, 147, 147)
+                            .addComponent(Caseo)))
+                    .addContainerGap(73, Short.MAX_VALUE))
+            );
+            crearAseoLayout.setVerticalGroup(
+                crearAseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(crearAseoLayout.createSequentialGroup()
+                    .addGap(50, 50, 50)
+                    .addGroup(crearAseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel25)
+                        .addComponent(naseo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(25, 25, 25)
+                    .addGroup(crearAseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel26)
+                        .addComponent(Ndescr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(37, 37, 37)
+                    .addGroup(crearAseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel27)
+                        .addComponent(Funcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                    .addComponent(Caseo)
+                    .addGap(47, 47, 47))
+            );
+
+            setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+            LOGINP.setText("LOGIN");
+            LOGINP.addMouseListener(new java.awt.event.MouseAdapter() {
+                public void mouseClicked(java.awt.event.MouseEvent evt) {
+                    LOGINPMouseClicked(evt);
+                }
+            });
+
+            jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+            jLabel4.setText("BIENVENIDO A CINEPOLIS");
+
+            jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+            jLabel6.setText("LOG IN");
+
+            javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+            getContentPane().setLayout(layout);
+            layout.setHorizontalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(310, 310, 310)
+                            .addComponent(LOGINP, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(77, 77, 77)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap(34, Short.MAX_VALUE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(310, 310, 310)
-                        .addComponent(LOGINP, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(77, 77, 77)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(34, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel6)
+                        .addContainerGap(301, Short.MAX_VALUE)))
+            );
+            layout.setVerticalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(77, 77, 77)
-                    .addComponent(jLabel6)
-                    .addContainerGap(301, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(91, 91, 91)
-                .addComponent(LOGINP)
-                .addContainerGap(67, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(193, Short.MAX_VALUE)
-                    .addComponent(jLabel6)
-                    .addGap(61, 61, 61)))
-        );
+                    .addGap(49, 49, 49)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(91, 91, 91)
+                    .addComponent(LOGINP)
+                    .addContainerGap(67, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(193, Short.MAX_VALUE)
+                        .addComponent(jLabel6)
+                        .addGap(61, 61, 61)))
+            );
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+            pack();
+        }// </editor-fold>//GEN-END:initComponents
 
     private void LOGINPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LOGINPMouseClicked
         LogIn.setModal(true);//no deja salirse
@@ -546,30 +672,26 @@ public class Principal extends javax.swing.JFrame {
                 if (Usu.equals(emple.get(i).getUsuario()) && contra.equals(emple.get(i).getContra())) {
                     cargo = emple.get(i).getPuesto();
                     nombre = emple.get(i).getNombre();
-                    System.out.println(cargo);
-                    System.out.println(nombre);
                 }
-            
-            
-            if (cargo.equals("Dulceria")) {
-                System.out.println(cargo);
-                Dulceria.setModal(true);
-                Dulceria.pack();
-                Dulceria.setLocationRelativeTo(CreaEmple);
-                Dulceria.setVisible(true);
-            } else if (cargo.equals("Boleteria")) {
-                System.out.println(cargo);
-                Boleteria.setModal(true);
-                Boleteria.pack();
-                Boleteria.setLocationRelativeTo(this);
-                Boleteria.setVisible(true);
-            } else if (cargo.equals("Aseo")) {
-                System.out.println(cargo);
-                Aseo.setModal(true);
-                Aseo.pack();
-                Aseo.setLocationRelativeTo(this);
-                Aseo.setVisible(true);
-            }
+                if (cargo.equals("Dulceria")) {
+                    System.out.println(cargo);
+                    Dulceria.setModal(true);
+                    Dulceria.pack();
+                    Dulceria.setLocationRelativeTo(CreaEmple);
+                    Dulceria.setVisible(true);
+                } else if (cargo.equals("Boleteria")) {
+                    System.out.println(cargo);
+                    Boleteria.setModal(true);
+                    Boleteria.pack();
+                    Boleteria.setLocationRelativeTo(this);
+                    Boleteria.setVisible(true);
+                } else if (cargo.equals("Aseo")) {
+                    System.out.println(cargo);
+                    Aseo.setModal(true);
+                    Aseo.pack();
+                    Aseo.setLocationRelativeTo(this);
+                    Aseo.setVisible(true);
+                }
             }
         }
     }//GEN-LAST:event_CredencialesMouseClicked
@@ -585,29 +707,19 @@ public class Principal extends javax.swing.JFrame {
 
         String Nombre = Nnombre.getText();
         Date fecha = FechaEmple.getDate();
-        String Nusuario=this.NUsuario.getText();
-        String puesto=(String)CB_puesto.getSelectedItem();
-        String Contra=CContra.getText();
-        String Correo=CCorreo.getText();
+        String Nusuario = this.NUsuario.getText();
+        String puesto = (String) CB_puesto.getSelectedItem();
+        String Contra = CContra.getText();
+        String Correo = CCorreo.getText();
         emple.add(new Empleados(Nombre, fecha, Nusuario, Contra, Correo, puesto));
         JOptionPane.showMessageDialog(Cemple, "empleado creado exitosamente");
         Nnombre.setText("");
         NUsuario.setText("");
         CContra.setText("");
         CCorreo.setText("");
-        
-        
-    }//GEN-LAST:event_CNempleMouseClicked
 
-    private void CreaDulceKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CreaDulceKeyPressed
-        // TODO add your handling code here:
-        String Ndulce=Ndulc.getText();
-        String sabor=Nsabor.getText();
-        String tipo=(String)CB_tipo.getSelectedItem();
-        Ndulc.setText("");
-        Nsabor.setText("");
-        
-    }//GEN-LAST:event_CreaDulceKeyPressed
+
+    }//GEN-LAST:event_CNempleMouseClicked
 
     private void dulcesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dulcesMouseClicked
         CrearDulce.setModal(true);
@@ -623,8 +735,44 @@ public class Principal extends javax.swing.JFrame {
         Cpeli.setVisible(true);
     }//GEN-LAST:event_btcrearpeliMouseClicked
 
+    private void CreaDulceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreaDulceMouseClicked
+        // TODO add your handling code here:
+        String Ndulce = Ndulc.getText();
+        String sabor = Nsabor.getText();
+        String tipo = (String) CB_tipo.getSelectedItem();
+        Ndulc.setText("");
+        Nsabor.setText("");
+        dulce.add(new Dulces(Ndulce, sabor, tipo));
+    }//GEN-LAST:event_CreaDulceMouseClicked
+
+    private void CreaPeliMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreaPeliMouseClicked
+        String Nombre = NPeli.getText();
+        String Duracion = Durac.getText();
+        String Clasi = TaCla.getText();
+        String Cate = (String) CB_cate.getSelectedItem();
+        peli.add(new peliculas(Nombre, Duracion, Clasi, Cate));
+        JOptionPane.showMessageDialog(this, "pelicula creada de forma exitosa");
+
+    }//GEN-LAST:event_CreaPeliMouseClicked
+
+    private void CreaAseoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreaAseoMouseClicked
+        crearAseo.setModal(true);
+        crearAseo.pack();
+        crearAseo.setLocationRelativeTo(this);
+        crearAseo.setVisible(true);
+
+    }//GEN-LAST:event_CreaAseoMouseClicked
+
+    private void CaseoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CaseoMouseClicked
+        String Nombre = naseo.getText();
+        String Desc = Ndescr.getText();
+        String Tipo = (String) Funcion.getSelectedItem();
+        aseo.add(new Aseo(Nombre, Desc, Tipo));
+
+    }//GEN-LAST:event_CaseoMouseClicked
+
     public static void main(String args[]) {
-        
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -654,33 +802,41 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog Aseo;
     private javax.swing.JDialog Boleteria;
+    private javax.swing.JComboBox<String> CB_cate;
     private javax.swing.JComboBox<String> CB_puesto;
     private javax.swing.JComboBox<String> CB_tipo;
     private javax.swing.JTextField CContra;
     private javax.swing.JTextField CCorreo;
     private javax.swing.JButton CNemple;
+    private javax.swing.JButton Caseo;
     private javax.swing.JButton Cemple;
     private javax.swing.JDialog Cpeli;
+    private javax.swing.JButton CreaAseo;
     private javax.swing.JButton CreaDulce;
     private javax.swing.JDialog CreaEmple;
     private javax.swing.JButton CreaPeli;
     private javax.swing.JDialog CrearDulce;
     private javax.swing.JButton Credenciales;
     private javax.swing.JDialog Dulceria;
+    private javax.swing.JTextField Durac;
     private com.toedter.calendar.JDateChooser FechaEmple;
+    private javax.swing.JComboBox<String> Funcion;
     private javax.swing.JButton LOGINP;
     private javax.swing.JDialog LogIn;
     private javax.swing.JDialog Madmin;
     private javax.swing.JTextField NPeli;
     private javax.swing.JTextField NUsuario;
+    private javax.swing.JTextField Ndescr;
     private javax.swing.JTextField Ndulc;
     private javax.swing.JTextField Nnombre;
     private javax.swing.JTextField Nsabor;
+    private javax.swing.JTextField TaCla;
     private javax.swing.JTextField USUlog;
+    private javax.swing.JTree arbolaseo;
     private javax.swing.JButton btcrearpeli;
     private javax.swing.JPasswordField contralog;
+    private javax.swing.JDialog crearAseo;
     private javax.swing.JButton dulces;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -697,6 +853,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -704,12 +864,16 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTree jTree2;
+    private javax.swing.JTextField naseo;
     // End of variables declaration//GEN-END:variables
 ArrayList<Empleados> emple = new ArrayList();
-ArrayList<Dulces> dulce = new ArrayList();
-ArrayList<peliculas> peli = new ArrayList();
-ArrayList<Aseo> aseo = new ArrayList();
+    ArrayList<Dulces> dulce = new ArrayList();
+    ArrayList<peliculas> peli = new ArrayList();
+    ArrayList<Aseo> aseo = new ArrayList();
 
 }

@@ -13,8 +13,6 @@ public class peliculas {
     private String nombre;
     private String duracion;
     private String clasificacion;
-    
-    
     private String categoria;
 
     public peliculas() {
