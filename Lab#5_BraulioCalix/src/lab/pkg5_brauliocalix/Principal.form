@@ -1077,31 +1077,6 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Modificar_nombreMouseClicked"/>
           </Events>
         </MenuItem>
-        <MenuItem class="javax.swing.JMenuItem" name="modificar_fecha">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="modificar_fecha"/>
-          </Properties>
-        </MenuItem>
-        <MenuItem class="javax.swing.JMenuItem" name="modificar_usuario">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="modificar_usuario"/>
-          </Properties>
-        </MenuItem>
-        <MenuItem class="javax.swing.JMenuItem" name="modificar_contra">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="modificar contrasenia"/>
-          </Properties>
-        </MenuItem>
-        <MenuItem class="javax.swing.JMenuItem" name="modificar_correo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="modificar correo"/>
-          </Properties>
-        </MenuItem>
-        <MenuItem class="javax.swing.JMenuItem" name="modificar_puesto">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="modificar puesto"/>
-          </Properties>
-        </MenuItem>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPopupMenu" name="popDulces">

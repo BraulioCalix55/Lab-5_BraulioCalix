@@ -118,11 +118,6 @@ public class Principal extends javax.swing.JFrame {
         Caseo = new javax.swing.JButton();
         popempleado = new javax.swing.JPopupMenu();
         Modificar_nombre = new javax.swing.JMenuItem();
-        modificar_fecha = new javax.swing.JMenuItem();
-        modificar_usuario = new javax.swing.JMenuItem();
-        modificar_contra = new javax.swing.JMenuItem();
-        modificar_correo = new javax.swing.JMenuItem();
-        modificar_puesto = new javax.swing.JMenuItem();
         popDulces = new javax.swing.JPopupMenu();
         modificar_nombre = new javax.swing.JMenuItem();
         modificar_sabor = new javax.swing.JMenuItem();
@@ -770,21 +765,6 @@ public class Principal extends javax.swing.JFrame {
             });
             popempleado.add(Modificar_nombre);
 
-            modificar_fecha.setText("modificar_fecha");
-            popempleado.add(modificar_fecha);
-
-            modificar_usuario.setText("modificar_usuario");
-            popempleado.add(modificar_usuario);
-
-            modificar_contra.setText("modificar contrasenia");
-            popempleado.add(modificar_contra);
-
-            modificar_correo.setText("modificar correo");
-            popempleado.add(modificar_correo);
-
-            modificar_puesto.setText("modificar puesto");
-            popempleado.add(modificar_puesto);
-
             modificar_nombre.setText("modificar nombre");
             popDulces.add(modificar_nombre);
 
@@ -1204,7 +1184,10 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here://modificar nombre del empleado
         DefaultTreeModel s=(DefaultTreeModel)jt_empleados.getModel();
         p.setNombre(JOptionPane.showInputDialog("nombre"));
-        
+        p.setCategoria(JOptionPane.showInputDialog("categorias"));
+        p.setClasificacion(JOptionPane.showInputDialog("clasificacion"));
+        p.setDuracion(JOptionPane.showInputDialog("duracion"));
+   
     }//GEN-LAST:event_Modificar_nombreMouseClicked
 
     public static void main(String args[]) {
@@ -1328,14 +1311,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem modificar_categ;
     private javax.swing.JMenuItem modificar_categoria;
     private javax.swing.JMenuItem modificar_clasi;
-    private javax.swing.JMenuItem modificar_contra;
-    private javax.swing.JMenuItem modificar_correo;
     private javax.swing.JMenuItem modificar_duracion;
-    private javax.swing.JMenuItem modificar_fecha;
     private javax.swing.JMenuItem modificar_nombre;
-    private javax.swing.JMenuItem modificar_puesto;
     private javax.swing.JMenuItem modificar_sabor;
-    private javax.swing.JMenuItem modificar_usuario;
     private javax.swing.JTextField naseo;
     private javax.swing.JPopupMenu popDulces;
     private javax.swing.JPopupMenu popPelis;
