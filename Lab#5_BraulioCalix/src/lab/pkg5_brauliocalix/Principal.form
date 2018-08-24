@@ -1073,6 +1073,9 @@
             <Property name="text" type="java.lang.String" value="modificar nombre"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Modificar_nombreMouseClicked"/>
+          </Events>
         </MenuItem>
         <MenuItem class="javax.swing.JMenuItem" name="modificar_fecha">
           <Properties>

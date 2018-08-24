@@ -763,6 +763,11 @@ public class Principal extends javax.swing.JFrame {
 
             Modificar_nombre.setText("modificar nombre");
             Modificar_nombre.setToolTipText("");
+            Modificar_nombre.addMouseListener(new java.awt.event.MouseAdapter() {
+                public void mouseClicked(java.awt.event.MouseEvent evt) {
+                    Modificar_nombreMouseClicked(evt);
+                }
+            });
             popempleado.add(Modificar_nombre);
 
             modificar_fecha.setText("modificar_fecha");
@@ -1093,12 +1098,6 @@ public class Principal extends javax.swing.JFrame {
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modeloARBOL.getRoot();
             //obtenera la persona a guardar
             DefaultListModel modeloLISTA = (DefaultListModel) jl_dulces.getModel();
-            /*
-             nombre;
-    private String sabor;
-    private String c
-             */
-
             String nombre;
             String sabor;
             String catego;
@@ -1200,6 +1199,13 @@ public class Principal extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jt_dulcesMouseClicked
+
+    private void Modificar_nombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Modificar_nombreMouseClicked
+        // TODO add your handling code here://modificar nombre del empleado
+        DefaultTreeModel s=(DefaultTreeModel)jt_empleados.getModel();
+        p.setNombre(JOptionPane.showInputDialog("nombre"));
+        
+    }//GEN-LAST:event_Modificar_nombreMouseClicked
 
     public static void main(String args[]) {
 
@@ -1340,5 +1346,6 @@ public class Principal extends javax.swing.JFrame {
     ArrayList<Dulces> dulce = new ArrayList();
     ArrayList<peliculas> peli = new ArrayList();
     ArrayList<Aseo> aseo = new ArrayList();
-
+    peliculas p;
+    
 }
