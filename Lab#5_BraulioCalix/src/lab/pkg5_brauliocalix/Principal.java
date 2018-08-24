@@ -5,6 +5,10 @@
  */
 package lab.pkg5_brauliocalix;
 
+import java.util.ArrayList;
+import java.util.Date;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -33,8 +37,28 @@ public class Principal extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         USUlog = new javax.swing.JTextField();
         contralog = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        Credenciales = new javax.swing.JButton();
         Madmin = new javax.swing.JDialog();
+        jLabel3 = new javax.swing.JLabel();
+        Cemple = new javax.swing.JButton();
+        Dulceria = new javax.swing.JDialog();
+        boleteria = new javax.swing.JDialog();
+        Aseo = new javax.swing.JDialog();
+        CreaEmple = new javax.swing.JDialog();
+        jLabel7 = new javax.swing.JLabel();
+        Nnombre = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        FechaEmple = new com.toedter.calendar.JDateChooser();
+        NUsuario = new javax.swing.JTextField();
+        CB_puesto = new javax.swing.JComboBox<>();
+        CNemple = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        CCorreo = new javax.swing.JTextField();
+        CContra = new javax.swing.JTextField();
         LOGINP = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -46,10 +70,10 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel5.setText("CONTRASEÑA");
 
-        jButton1.setText("INGRESAR");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        Credenciales.setText("INGRESAR");
+        Credenciales.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                CredencialesMouseClicked(evt);
             }
         });
 
@@ -69,7 +93,7 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(LogInLayout.createSequentialGroup()
                 .addGap(107, 107, 107)
-                .addComponent(jButton1)
+                .addComponent(Credenciales)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(LogInLayout.createSequentialGroup()
                 .addGap(63, 63, 63)
@@ -90,19 +114,168 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(contralog, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(Credenciales)
                 .addGap(27, 27, 27))
         );
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel3.setText("ADMIN");
+
+        Cemple.setText("CREAR EMPLEADO");
+        Cemple.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CempleMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout MadminLayout = new javax.swing.GroupLayout(Madmin.getContentPane());
         Madmin.getContentPane().setLayout(MadminLayout);
         MadminLayout.setHorizontalGroup(
             MadminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 536, Short.MAX_VALUE)
+            .addGroup(MadminLayout.createSequentialGroup()
+                .addGap(189, 189, 189)
+                .addGroup(MadminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Cemple)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(210, Short.MAX_VALUE))
         );
         MadminLayout.setVerticalGroup(
             MadminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 381, Short.MAX_VALUE)
+            .addGroup(MadminLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
+                .addComponent(Cemple)
+                .addContainerGap(255, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout DulceriaLayout = new javax.swing.GroupLayout(Dulceria.getContentPane());
+        Dulceria.getContentPane().setLayout(DulceriaLayout);
+        DulceriaLayout.setHorizontalGroup(
+            DulceriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        DulceriaLayout.setVerticalGroup(
+            DulceriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout boleteriaLayout = new javax.swing.GroupLayout(boleteria.getContentPane());
+        boleteria.getContentPane().setLayout(boleteriaLayout);
+        boleteriaLayout.setHorizontalGroup(
+            boleteriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        boleteriaLayout.setVerticalGroup(
+            boleteriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout AseoLayout = new javax.swing.GroupLayout(Aseo.getContentPane());
+        Aseo.getContentPane().setLayout(AseoLayout);
+        AseoLayout.setHorizontalGroup(
+            AseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        AseoLayout.setVerticalGroup(
+            AseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        jLabel7.setText("Nombre ");
+
+        jLabel8.setText("ingrese los datos del empleado");
+
+        jLabel9.setText("Fecha de nacimiento");
+
+        jLabel10.setText("puesto");
+
+        jLabel11.setText("Correo");
+
+        CB_puesto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dulceria", "Boleteria", "Aseo" }));
+
+        CNemple.setText("Crear Empleado");
+        CNemple.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CNempleMouseClicked(evt);
+            }
+        });
+
+        jLabel12.setText("Nombre de usuario");
+
+        jLabel13.setText("Contraseña");
+
+        javax.swing.GroupLayout CreaEmpleLayout = new javax.swing.GroupLayout(CreaEmple.getContentPane());
+        CreaEmple.getContentPane().setLayout(CreaEmpleLayout);
+        CreaEmpleLayout.setHorizontalGroup(
+            CreaEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CreaEmpleLayout.createSequentialGroup()
+                .addGroup(CreaEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CreaEmpleLayout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addComponent(jLabel8))
+                    .addGroup(CreaEmpleLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(CreaEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel13))
+                        .addGap(88, 88, 88)
+                        .addGroup(CreaEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Nnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(CreaEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(CB_puesto, javax.swing.GroupLayout.Alignment.LEADING, 0, 100, Short.MAX_VALUE)
+                                .addComponent(NUsuario, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(CCorreo))
+                            .addComponent(FechaEmple, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CContra, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(CreaEmpleLayout.createSequentialGroup()
+                        .addGap(161, 161, 161)
+                        .addComponent(CNemple)))
+                .addContainerGap(155, Short.MAX_VALUE))
+            .addGroup(CreaEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(CreaEmpleLayout.createSequentialGroup()
+                    .addGap(45, 45, 45)
+                    .addComponent(jLabel12)
+                    .addContainerGap(363, Short.MAX_VALUE)))
+        );
+        CreaEmpleLayout.setVerticalGroup(
+            CreaEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CreaEmpleLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addGap(25, 25, 25)
+                .addGroup(CreaEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(Nnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(CreaEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9)
+                    .addComponent(FechaEmple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addComponent(NUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addGroup(CreaEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(CB_puesto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(CreaEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(CCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(CreaEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(CContra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addComponent(CNemple)
+                .addGap(25, 25, 25))
+            .addGroup(CreaEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(CreaEmpleLayout.createSequentialGroup()
+                    .addGap(159, 159, 159)
+                    .addComponent(jLabel12)
+                    .addContainerGap(256, Short.MAX_VALUE)))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -164,14 +337,65 @@ public class Principal extends javax.swing.JFrame {
         LogIn.setVisible(true);
     }//GEN-LAST:event_LOGINPMouseClicked
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void CredencialesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CredencialesMouseClicked
         // USUlog contralog
-        String Usu=USUlog.getText();
-        String contra=contralog.getText();
-        if (Usu.equals("admin")&&contra.equals("admin")) {
-            
+        String Usu = USUlog.getText();
+        String contra = contralog.getText();
+        String cargo = "";
+        String nombre = "";
+        if (Usu.equals("admin") && contra.equals("admin")) {
+            Madmin.setModal(true);//no deja salirse
+            Madmin.pack();
+            Madmin.setLocationRelativeTo(this);
+            Madmin.setVisible(true);
+        } else {
+            for (int i = 0; i < emple.size(); i++) {
+                if (Usu.equals(emple.get(i).getUsuario()) && contra.equals(emple.get(i).getContra())) {
+                    cargo = emple.get(i).getPuesto();
+                    nombre = emple.get(i).getNombre();
+                }
+            }
+            JOptionPane.showMessageDialog(this, "bienvenido " + nombre);
+            if (cargo.equals("dulceria")) {
+                System.out.println(cargo);
+                Dulceria.setModal(true);
+                Dulceria.pack();
+                Dulceria.setLocationRelativeTo(this);
+                Dulceria.setVisible(true);
+            } else if (cargo.equals("boleteria")) {
+                System.out.println(cargo);
+                boleteria.setModal(true);
+                boleteria.pack();
+                boleteria.setLocationRelativeTo(this);
+                boleteria.setVisible(true);
+            } else if (cargo.equals("aseo")) {
+                System.out.println(cargo);
+                Aseo.setModal(true);
+                Aseo.pack();
+                Aseo.setLocationRelativeTo(this);
+                Aseo.setVisible(true);
+            }
         }
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_CredencialesMouseClicked
+
+    private void CempleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CempleMouseClicked
+        CreaEmple.setModal(true);
+        CreaEmple.pack();
+        CreaEmple.setLocationRelativeTo(this);
+        CreaEmple.setVisible(true);
+    }//GEN-LAST:event_CempleMouseClicked
+
+    private void CNempleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CNempleMouseClicked
+
+        String Nombre = Nnombre.getText();
+        Date fecha = FechaEmple.getDate();
+        String Nusuario=this.NUsuario.getText();
+        String puesto=(String)CB_puesto.getSelectedItem();
+        String Contra=CContra.getText();
+        String Correo=CCorreo.getText();
+        emple.add(new Empleados(Nombre, fecha, Nusuario, Contra, Correo, puesto));
+        
+    }//GEN-LAST:event_CNempleMouseClicked
 
     /**
      * @param args the command line arguments
@@ -209,18 +433,37 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog Aseo;
+    private javax.swing.JComboBox<String> CB_puesto;
+    private javax.swing.JTextField CContra;
+    private javax.swing.JTextField CCorreo;
+    private javax.swing.JButton CNemple;
+    private javax.swing.JButton Cemple;
+    private javax.swing.JDialog CreaEmple;
+    private javax.swing.JButton Credenciales;
+    private javax.swing.JDialog Dulceria;
+    private com.toedter.calendar.JDateChooser FechaEmple;
     private javax.swing.JButton LOGINP;
     private javax.swing.JDialog LogIn;
     private javax.swing.JDialog Madmin;
+    private javax.swing.JTextField NUsuario;
+    private javax.swing.JTextField Nnombre;
     private javax.swing.JTextField USUlog;
+    private javax.swing.JDialog boleteria;
     private javax.swing.JPasswordField contralog;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
-
-
+ArrayList<Empleados> emple = new ArrayList();
 }

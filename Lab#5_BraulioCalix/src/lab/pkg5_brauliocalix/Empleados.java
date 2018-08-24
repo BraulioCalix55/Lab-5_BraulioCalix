@@ -5,13 +5,15 @@
  */
 package lab.pkg5_brauliocalix;
 
+import java.util.Date;
+
 /**
  *
  * @author User
  */
 public class Empleados {
     private String Nombre;
-    private String fecha;
+    private Date fecha;
     private String usuario;
     private String Contra;
     private String correo;
@@ -20,7 +22,7 @@ public class Empleados {
     public Empleados() {
     }
 
-    public Empleados(String Nombre, String fecha, String usuario, String Contra, String correo, String puesto) {
+    public Empleados(String Nombre, Date fecha, String usuario, String Contra, String correo, String puesto) {
         this.Nombre = Nombre;
         this.fecha = fecha;
         this.usuario = usuario;
@@ -37,11 +39,11 @@ public class Empleados {
         this.Nombre = Nombre;
     }
 
-    public String getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
