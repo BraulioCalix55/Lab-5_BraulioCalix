@@ -39,16 +39,22 @@ public class Principal extends javax.swing.JFrame {
         USUlog = new javax.swing.JTextField();
         contralog = new javax.swing.JPasswordField();
         Credenciales = new javax.swing.JButton();
+        jLabel28 = new javax.swing.JLabel();
         Madmin = new javax.swing.JDialog();
         jLabel3 = new javax.swing.JLabel();
         Cemple = new javax.swing.JButton();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jl_empleados = new javax.swing.JList<>();
+        jButton4 = new javax.swing.JButton();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jTree3 = new javax.swing.JTree();
         Dulceria = new javax.swing.JDialog();
         jLabel14 = new javax.swing.JLabel();
         dulces = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTree2 = new javax.swing.JTree();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jList3 = new javax.swing.JList<>();
+        jl_dulces = new javax.swing.JList<>();
         jButton2 = new javax.swing.JButton();
         Cpeli = new javax.swing.JDialog();
         jLabel18 = new javax.swing.JLabel();
@@ -67,7 +73,7 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         arbolaseo = new javax.swing.JTree();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jl_aseo = new javax.swing.JList<>();
         jButton3 = new javax.swing.JButton();
         CreaEmple = new javax.swing.JDialog();
         jLabel7 = new javax.swing.JLabel();
@@ -96,7 +102,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         btcrearpeli = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList<>();
+        jl_pelis = new javax.swing.JList<>();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTree1 = new javax.swing.JTree();
         jButton1 = new javax.swing.JButton();
@@ -126,6 +132,8 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jLabel28.setText("usuario: admin, contra: admin");
+
         javax.swing.GroupLayout LogInLayout = new javax.swing.GroupLayout(LogIn.getContentPane());
         LogIn.getContentPane().setLayout(LogInLayout);
         LogInLayout.setHorizontalGroup(
@@ -146,7 +154,11 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(LogInLayout.createSequentialGroup()
                 .addGap(63, 63, 63)
-                .addComponent(jLabel1)
+                .addGroup(LogInLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(LogInLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel28))
+                    .addComponent(jLabel1))
                 .addContainerGap(79, Short.MAX_VALUE))
         );
         LogInLayout.setVerticalGroup(
@@ -154,7 +166,9 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(LogInLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(jLabel1)
-                .addGap(53, 53, 53)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel28)
+                .addGap(30, 30, 30)
                 .addGroup(LogInLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(USUlog, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -177,16 +191,33 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jl_empleados.setModel(new DefaultListModel());
+        jScrollPane7.setViewportView(jl_empleados);
+
+        jButton4.setText("--->");
+
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Empleados");
+        jTree3.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane8.setViewportView(jTree3);
+
         javax.swing.GroupLayout MadminLayout = new javax.swing.GroupLayout(Madmin.getContentPane());
         Madmin.getContentPane().setLayout(MadminLayout);
         MadminLayout.setHorizontalGroup(
             MadminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MadminLayout.createSequentialGroup()
-                .addGap(189, 189, 189)
-                .addGroup(MadminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Cemple)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(210, Short.MAX_VALUE))
+                .addGap(58, 58, 58)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addGroup(MadminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MadminLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jButton4)
+                        .addGap(40, 40, 40)
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(MadminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(Cemple)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         MadminLayout.setVerticalGroup(
             MadminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,7 +226,16 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45)
                 .addComponent(Cemple)
-                .addContainerGap(255, Short.MAX_VALUE))
+                .addGroup(MadminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MadminLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(jButton4))
+                    .addGroup(MadminLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(MadminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
 
         jLabel14.setText("DULCERIA");
@@ -207,12 +247,12 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("dulces");
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("dulces");
         jTree2.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane4.setViewportView(jTree2);
 
-        jList3.setModel(new DefaultListModel());
-        jScrollPane6.setViewportView(jList3);
+        jl_dulces.setModel(new DefaultListModel());
+        jScrollPane6.setViewportView(jl_dulces);
 
         jButton2.setText("--->");
 
@@ -343,8 +383,8 @@ public class Principal extends javax.swing.JFrame {
         arbolaseo.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane1.setViewportView(arbolaseo);
 
-        jList1.setModel(new DefaultListModel());
-        jScrollPane2.setViewportView(jList1);
+        jl_aseo.setModel(new DefaultListModel());
+        jScrollPane2.setViewportView(jl_aseo);
 
         jButton3.setText("---->");
 
@@ -552,8 +592,8 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jList2.setModel(new DefaultListModel());
-        jScrollPane3.setViewportView(jList2);
+        jl_pelis.setModel(new DefaultListModel());
+        jScrollPane3.setViewportView(jl_pelis);
 
         treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("peliculas");
         jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
@@ -581,7 +621,7 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(jButton1)
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(152, Short.MAX_VALUE))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
         BoleteriaLayout.setVerticalGroup(
             BoleteriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -773,13 +813,17 @@ public class Principal extends javax.swing.JFrame {
         String puesto = (String) CB_puesto.getSelectedItem();
         String Contra = CContra.getText();
         String Correo = CCorreo.getText();
-        emple.add(new Empleados(Nombre, fecha, Nusuario, Contra, Correo, puesto));
-        JOptionPane.showMessageDialog(Cemple, "empleado creado exitosamente");
         Nnombre.setText("");
         NUsuario.setText("");
         CContra.setText("");
         CCorreo.setText("");
-
+        DefaultListModel modeloLista = (DefaultListModel) jl_empleados.getModel();
+        emple.add(new Empleados(Nombre, fecha, Nusuario, Contra, Correo, puesto));
+        modeloLista.addElement(new Empleados(Nombre, fecha, Nusuario, Contra, Correo, puesto));
+        jl_empleados.setModel(modeloLista);
+        JOptionPane.showMessageDialog(Madmin, "Creado existosamente");
+        
+       
 
     }//GEN-LAST:event_CNempleMouseClicked
 
@@ -804,7 +848,14 @@ public class Principal extends javax.swing.JFrame {
         String tipo = (String) CB_tipo.getSelectedItem();
         Ndulc.setText("");
         Nsabor.setText("");
+        
+        DefaultListModel modeloLista = (DefaultListModel) jl_dulces.getModel();
         dulce.add(new Dulces(Ndulce, sabor, tipo));
+        modeloLista.addElement(new Dulces(Ndulce, sabor, tipo));
+        jl_empleados.setModel(modeloLista);
+        JOptionPane.showMessageDialog(Dulceria, "Creado existosamente");
+        
+        
     }//GEN-LAST:event_CreaDulceMouseClicked
 
     private void CreaPeliMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreaPeliMouseClicked
@@ -813,7 +864,12 @@ public class Principal extends javax.swing.JFrame {
         String Clasi = TaCla.getText();
         String Cate = (String) CB_cate.getSelectedItem();
         peli.add(new peliculas(Nombre, Duracion, Clasi, Cate));
-        JOptionPane.showMessageDialog(this, "pelicula creada de forma exitosa");
+        
+        DefaultListModel modeloLista = (DefaultListModel) jl_pelis.getModel();
+        peli.add(new peliculas(Nombre, Duracion, Clasi, Cate));
+        modeloLista.addElement(new peliculas(Nombre, Duracion, Clasi, Cate));
+        jl_pelis.setModel(modeloLista);
+        JOptionPane.showMessageDialog(jl_pelis, "Creado existosamente");
 
     }//GEN-LAST:event_CreaPeliMouseClicked
 
@@ -829,7 +885,12 @@ public class Principal extends javax.swing.JFrame {
         String Nombre = naseo.getText();
         String Desc = Ndescr.getText();
         String Tipo = (String) Funcion.getSelectedItem();
+        
+        DefaultListModel modeloLista = (DefaultListModel) jl_aseo.getModel();
         aseo.add(new Aseo(Nombre, Desc, Tipo));
+        modeloLista.addElement(new Aseo(Nombre, Desc, Tipo));
+        jl_aseo.setModel(modeloLista);
+        JOptionPane.showMessageDialog(jl_aseo, "Creado existosamente");
 
     }//GEN-LAST:event_CaseoMouseClicked
 
@@ -902,6 +963,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -922,6 +984,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -929,17 +992,21 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JList<String> jList2;
-    private javax.swing.JList<String> jList3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTree jTree1;
     private javax.swing.JTree jTree2;
+    private javax.swing.JTree jTree3;
+    private javax.swing.JList<String> jl_aseo;
+    private javax.swing.JList<String> jl_dulces;
+    private javax.swing.JList<String> jl_empleados;
+    private javax.swing.JList<String> jl_pelis;
     private javax.swing.JTextField naseo;
     // End of variables declaration//GEN-END:variables
 ArrayList<Empleados> emple = new ArrayList();

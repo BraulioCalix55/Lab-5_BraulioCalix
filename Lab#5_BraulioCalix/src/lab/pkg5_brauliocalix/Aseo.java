@@ -50,7 +50,7 @@ public class Aseo {
 
     @Override
     public String toString() {
-        return "Aseo{" + "nombre=" + nombre + ", descrip=" + descrip + ", funcion=" + funcion + '}';
+        return nombre;
     }
 
 

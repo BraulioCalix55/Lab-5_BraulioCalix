@@ -59,7 +59,7 @@ public class peliculas {
 
     @Override
     public String toString() {
-        return "peliculas{" + "nombre=" + nombre + ", duracion=" + duracion + ", clasificacion=" + clasificacion + ", categoria=" + categoria + '}';
+        return nombre;
     }
     
 }
